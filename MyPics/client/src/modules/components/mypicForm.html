@@ -1,0 +1,28 @@
+<template>
+    
+    <div class="container">
+            
+        <span><i click.trigger="back()" class="fa fa-arrow-left fa-lg" 	aria-hidden="true"></i></span>
+        <h1 style="font-family: verdana;color:#FF7F00; text-align:center;"><b>Gallery</b></h1>    
+            <form>
+            <div class="form-group topMargin">
+                  <label for="mypicInput" style="color:#FF0000;font-size:180%;font-family: verdana;"><b>Gallery*:</b></label>
+                  <input value.bind="mypicObj.mypic" type="text" class="form-control" id="mypicInput" aria-describedby="mypicHelp" 
+                    placeholder="Enter Gallery Name" style="color:#FF0505;font-size:130%;font-family: verdana;">
+                  <small id="mypicHelp" class="form-text text-muted" style="color:#FF0000;font-size:100%;font-family: verdana;">
+                    <b>Name your master piece.</b></small>
+            </div>
+<div class="form-group">
+<label for="descInput" style="color:black;font-size:160%;font-family: verdana;"><b>Description:</b></label>
+<input value.bind="mypicObj.description" type="text" class="form-control" id="descInput" aria-describedby="descHelp" placeholder="Enter Description" style="color:#FF0000;font-size:120%;font-family: verdana;"><small id="descHelp" class="form-text text-muted" style="color:black;font-size:100%;font-family: verdana;"><b>A gallery description.</b></small>
+</div>
+
+    <div class="form-group">
+   <label for="dateCreatedInput" style="color:#FF0000;font-size:150%;font-family: verdana;"><b>Date Created*:</b></label><flat-picker value.bind="mypicObj.dateCreated"></flat-picker><small id="dateCreatedHelp" class="form-text text-muted" style="color:black;font-size:100%;font-family: verdana;"><b>The gallery creation date.</b></small>
+</div>  
+<button click.trigger="saveMypic()" class="btn btn-primary topMargin" style="color:#F10808;font-size:180%;font-family: verdana;"><b>Save</b></button>
+             
+         </form>
+    </div>  
+            </template>
+                    
