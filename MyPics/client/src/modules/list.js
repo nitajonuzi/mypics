@@ -40,7 +40,7 @@ export class List {
       Id: this.selectedgallery
 		
 		}
-		this.showing = 'photoForm';		
+		this.showing = 'PicForm';		
   }
   
      editMypic(mypic){
@@ -50,7 +50,7 @@ export class List {
 
     editPhotos(mypic){
              this.mypicObj = mypic;
-              this.showing = 'photoForm';	
+              this.showing = 'PicForm';	
     }
 
        deleteMypic(mypic){
@@ -66,7 +66,7 @@ export class List {
     }
 
     backPhotos(){
-      this.showing = "photoList";
+      this.showing = "PicList";
   }
 	async saveMypic(){
 		if(this.mypicObj){		
@@ -98,14 +98,14 @@ export class List {
                         }
           
 			}
-			this.showing = "photoList";
+			this.showing = "PicList";
 		}
   }
   
 async showPhotos(mypic){
   this.selectedgallery =  mypic._id;
  await this.mygalleries.getPhotos(mypic._id)
-this.showing = "photoList";
+this.showing = "PicList";
   }
 
   changeFiles(){
